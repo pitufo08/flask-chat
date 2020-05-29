@@ -20,7 +20,7 @@ def get_all_messages():
 @app.route("/")
 def index():
     """Main page with instructions"""
-    render_template("index.html")
+    return render_template("index.html")
 
 
 @app.route("/<username>")
@@ -34,5 +34,5 @@ def send_message(username, message):
     """Create a new message and redirect back to the chat page"""
     add_messages(username, message)
     return redirect("/" + username)
-
+    
 app.run(debug=True)

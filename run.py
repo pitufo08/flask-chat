@@ -33,5 +33,4 @@ def send_message(username, message):
     add_messages(username, message)
     return redirect("/" + username)
 
-
-app.run(host=os.getenv("IP"), port=int(os.getenv("PORT")), debug=True)
+app.run(debug=True)
